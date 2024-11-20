@@ -1,0 +1,85 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px; /* Aumenta el padding para hacer el cuadro más grande */
+    border-radius: 10px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Añade una sombra más pronunciada */
+    width: 600px; /* Puedes ajustar este valor para cambiar el ancho del cuadro */
+    margin: 20px auto; /* Centra el cuadro horizontalmente */
+}
+
+.profile-icon {
+    font-size: 100px; /* Ajusta este valor según el tamaño deseado */
+    color: #feb47b; /* Cambia el color si lo deseas */
+}
+
+.profile-header {
+    font-size: 2.5rem; /* Aumenta el tamaño de la fuente del encabezado */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000; /* Añade una línea negra debajo del encabezado */
+    padding-bottom: 10px; /* Añade un poco de espacio entre el texto y la línea */
+}
+
+.profile-name {
+    font-size: 1.8rem; /* Aumenta el tamaño de la fuente del nombre */
+    margin-bottom: 15px;
+}
+
+.profile-details {
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente de los detalles */
+}
+
+.profile-details p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-details p strong {
+    font-weight: bold; /* Asegura que las etiquetas Email y Password estén en negritas */
+    margin-right: 10px; /* Añade espacio entre la palabra "Password" y el valor de la contraseña */
+}
+
+.password-field {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
+/* Boton Configuracion*/
+.guardar-profile {
+    padding: 10px 20px; /* Ajusta el tamaño del botón */
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradiente de color difuminado */
+    color: white; /* Color del texto blanco */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.guardar-profile:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Inversión de gradiente en hover */
+}
+
+.guardar-profile:active {
+    transform: scale(0.95);
+}

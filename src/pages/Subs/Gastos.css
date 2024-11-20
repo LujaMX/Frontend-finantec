@@ -1,0 +1,271 @@
+.gastos-container {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    top: 30px; /* Ajusta la posición del contenedor más arriba */
+}
+
+.gastos-title {
+    font-size: 1.7rem; /* Tamaño de fuente aumentado */
+    margin-bottom: 30px; /* Aumenta el espacio debajo del título */
+    position: relative;
+    top: -100px; /* Ajusta la posición del título más arriba */
+    display: inline-block; /* Para controlar el tamaño del contenedor */
+    padding: 10px 20px; /* Espaciado interno para el texto */
+    color: white; /* Color del texto */
+    background: linear-gradient(270deg, #99f896, #1e1e40); /* Fondo degradado */
+    border-radius: 50px; /* Hacer la franja ovalada */
+    overflow: hidden; /* Ocultar el contenido desbordado */
+    animation: move-background 5s linear infinite; /* Animación de desplazamiento */
+}
+
+@keyframes move-background {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.gastos-tabs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.gastos-tab {
+    padding: 15px 30px; /* Ajusta el tamaño del botón */
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradiente de color difuminado */
+    color: white; /* Color del texto blanco */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.gastos-tab:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Inversión de gradiente en hover */
+}
+
+.gastos-tab:active {
+    transform: scale(0.95);
+}
+
+
+.line {
+    width: 2px; /* Ancho de la línea vertical */
+    height: 0; /* Ajusta la altura inicial de la línea */
+    background-color: black; /* Color negro */
+    animation: grow-line 2s forwards; /* Animación para que la línea crezca */
+}
+
+@keyframes grow-line {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 200px; /* Ajusta la altura final de la línea */
+    }
+}
+/* Estilos para el contenedor del formulario */
+.register-expense-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.register-expense-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    animation: fade-in 0.5s ease-in-out;
+    overflow-y: auto; /* Permitir desplazamiento si el contenido es demasiado largo */
+    position: relative; /* Para la colocación de la cruz de cierre */
+}
+
+.register-expense-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 15px;
+    gap: 15px; /* Espacio entre los campos */
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.close-form-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-form-btn:hover {
+    color: #007bff;
+}
+
+.add-expense-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 10px; /* Espacio a los lados */
+}
+
+.add-expense-btn:hover {
+    background-color: #218838;
+}
+
+.remove-expense-btn {
+    background: transparent;
+    border: none;
+    color: #dc3545; /* Rojo para indicar eliminación */
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.remove-expense-btn:hover {
+    color: #c82333;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Estilos para el contenedor del formulario de servicios */
+.register-service-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.register-service-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    animation: fade-in 0.5s ease-in-out;
+    overflow-y: auto; /* Permitir desplazamiento si el contenido es demasiado largo */
+    position: relative; /* Para la colocación de la cruz de cierre */
+}
+
+.register-service-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.add-service-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 10px; /* Espacio a los lados */
+}
+
+.add-service-btn:hover {
+    background-color: #218838;
+}
+
+.remove-service-btn {
+    background: transparent;
+    border: none;
+    color: #dc3545; /* Rojo para indicar eliminación */
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 15px;
+}

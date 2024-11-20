@@ -1,0 +1,35 @@
+/* Define una variable CSS para el color de descarga de la aplicación */
+:root {
+    --app-download-color: rgba(12, 46, 158, 0.596); /* Define un color RGBA */
+}
+
+/* Estilos para el contenedor principal de descargas de la aplicación */
+.app-download {
+    margin: auto auto; /* Centra horizontal y verticalmente */
+    margin-top: 100px; /* Margen superior */
+    font-size: max(3vw, 20px); /* Tamaño de fuente adaptable */
+    text-align: center; /* Alineación del texto al centro */
+    font-weight: 500; /* Peso de la fuente */
+    color: var(--app-download-color); /* Utiliza la variable para el color */
+}
+
+/* Estilos para el contenedor de las plataformas de descarga */
+.app-download-plataforms {
+    display: flex; /* Utiliza flexbox para alinear elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: max(2vw, 10px); /* Espacio entre las imágenes */
+    margin-top: 40px; /* Margen superior */
+}
+
+/* Estilos para las imágenes de las plataformas de descarga */
+.app-download-plataforms img {
+    width: max(30vw, 120px); /* Ancho adaptable */
+    max-width: 180px; /* Ancho máximo */
+    transition: 0.5s; /* Transición suave */
+    cursor: pointer; /* Cambia el cursor al pasar sobre las imágenes */
+}
+
+/* Estilos al pasar el cursor sobre las imágenes */
+.app-download-plataforms img:hover {
+    transform: scale(1.05); /* Escala ligeramente la imagen */
+}

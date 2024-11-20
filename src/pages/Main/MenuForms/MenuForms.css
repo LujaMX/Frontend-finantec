@@ -1,0 +1,88 @@
+/* MenuForms.css */
+
+/* Estilos generales para el contenedor */
+.menu-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px; /* Aumentar el padding para bajar más el contenido */
+}
+
+/* Estilos para los títulos */
+.menu-form h2 {
+    margin: 240px 0; /* Aumentar margen superior para bajar el título */
+    font-size: 1.8rem; /* Ajustar el tamaño de fuente del título */
+    color: #333;
+}
+
+/* Estilos para las opciones del menú */
+.menu-options {
+    display: flex;
+    flex-direction: row; /* Alinea los recuadros horizontalmente */
+    gap: 20px;
+    justify-content: center; /* Centra los recuadros */
+    margin-top: -230px; /* Aumentar espacio entre el título y los recuadros */
+}
+
+.saving-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 200px;
+    height: 150px; /* Altura fija para uniformidad */
+    text-align: center; /* Centra el texto dentro del recuadro */
+}
+
+.saving-box:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-5px);
+}
+
+.saving-box.green {
+    background-color: #e0ffe0; /* Color verde claro */
+}
+
+.saving-box.blue {
+    background-color: #e0f0ff; /* Color azul claro */
+}
+
+.saving-box.pink {
+    background-color: #ffe0f0; /* Color rosa claro */
+}
+
+.icon {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+/* Sección de información */
+.info-section {
+    margin-top: 65px; /* Aumentar el espacio superior */
+    padding: 15px;
+    background-color: #f9f9f9; /* Fondo gris claro */
+    border-radius: 8px;
+    width: 100%; /* Ancho del área de información */
+    max-width: 800px; /* Ancho máximo para pantallas grandes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navigate-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navigate-button:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el ratón */
+}

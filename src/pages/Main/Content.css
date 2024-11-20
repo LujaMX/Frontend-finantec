@@ -1,0 +1,95 @@
+.content-container {
+    padding: 90px;
+    background: linear-gradient(135deg, #ebf7f5 40%, #71b4ff 60%, #090b70ee 80%); /* Gradiente de colores más difuso */
+    border-radius: 8px;
+    width: 200%; /* Ancho mayor para ocupar más espacio horizontal */
+    max-width: 1400px; /* Establece un ancho máximo para evitar que el contenedor sea demasiado grande en pantallas grandes */
+    margin: 0; /* Elimina el margen automático para que el contenedor se ajuste al centro */
+    position: relative; /* Necesario para usar transform */
+    left: -49%; /* Ajusta el contenedor hacia la izquierda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    min-height: 600px; /* Altura mínima ajustada para hacer el recuadro más alto */
+}
+
+
+.user-info {
+    margin-bottom: 20px;
+}
+
+.user-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.user-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd; /* Línea divisoria entre pestañas */
+}
+
+.tab-button {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button.active {
+    background: #007bff; /* Color de fondo activo */
+    color: white;
+    border-color: #007bff; /* Color del borde activo */
+}
+
+.tab-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Borde alrededor del contenido */
+}
+
+.tab-section {
+    margin-bottom: 20px;
+}
+
+.tables-wrapper {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las dos tablas */
+    width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
+}
+
+.table-container {
+    width: 45%; /* Ancho ajustado para que ambas tablas tengan más espacio entre ellas */
+}
+
+.table-container h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px; /* Aumenta el padding para mayor legibilidad */
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

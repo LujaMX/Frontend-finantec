@@ -1,0 +1,877 @@
+/* Estilos para la barra superior */
+.black-bar {
+    background-color: #000;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+/* Contenedor del ícono del mensaje en la esquina inferior derecha */
+.message-icon {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #333; 
+    border-radius: 50%; 
+    width: 50px; /* Ajusta el ancho del círculo */
+    height: 50px; /* Ajusta la altura del círculo para que sea igual al ancho */
+    color: #fff; /* Color del ícono */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    cursor: pointer; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; /* Centra verticalmente el ícono */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición para animación */
+}
+
+/* Ajusta el tamaño del ícono dentro del círculo */
+.message-icon i {
+    font-size: 24px; /* Ajusta el tamaño del ícono según el tamaño del círculo */
+}
+
+/* Efecto de animación al pasar el cursor sobre el ícono */
+.message-icon:hover {
+    background-color: #555; /* Cambia el fondo cuando el puntero está sobre el ícono */
+    transform: scale(1.3); /* Aumenta el tamaño del círculo ligeramente */
+}
+
+
+
+/* Icono del usuario en la franja negra */
+.user-icon {
+    color: white;
+    font-size: 24px; /* Tamaño del ícono */
+    cursor: pointer; /* Cursor de puntero para indicar clickeable */
+    position: relative; /* Para posicionar el menú desplegable */
+}
+
+/* Menú desplegable del usuario */
+.user-menu {
+    position: absolute;
+    right: 20px; /* Ajustar la posición según sea necesario */
+    top: 70px; /* Ajustar la posición según sea necesario */
+    background-color: white; /* Fondo blanco para el menú */
+    color: black;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    z-index: 20; /* Asegurarse de que esté sobre otros elementos */
+    width: 200px; /* Ancho del menú */
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Elimina el espaciado interno para alinear mejor el pico */
+}
+
+/* Pico del menú desplegable */
+.user-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Ajusta según sea necesario */
+    right: 20px; /* Ajusta según sea necesario */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white; /* Color del fondo del menú */
+}
+
+/* Elementos del menú desplegable */
+.user-menu-item {
+    padding: 12px; /* Espaciado interno */
+    display: flex;
+    align-items: center; /* Alineación vertical del ícono y el texto */
+    border-bottom: 1px solid #ddd; /* Línea divisoria */
+    cursor: pointer; /* Cursor de puntero para elementos clickeables */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.user-menu-item:hover {
+    background-color: #f0f0f0; /* Fondo más oscuro al pasar el ratón */
+}
+
+.user-menu-item:last-child {
+    border-bottom: none; /* Sin línea divisoria para el último elemento */
+}
+
+.user-menu-item i {
+    margin-right: 8px; /* Espaciado entre el ícono y el texto */
+}
+
+/* Estilos para la barra lateral azul */
+
+.blue-sidebar.open {
+    width: 250px; /* Ancho de la barra lateral abierta */
+}
+
+/* Estilos para los elementos de la barra lateral */
+.sidebar-item {
+    padding: 15px;
+    text-align: left;
+    color: white;
+    display: flex;
+    align-items: center; /* Alineación vertical del ícono y el texto */
+    cursor: pointer; /* Cursor de puntero para elementos clickeables */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.sidebar-item:hover {
+    background-color: #1c6ea4; /* Fondo más oscuro al pasar el ratón */
+}
+
+.sidebar-item i {
+    margin-right: 10px; /* Espaciado entre el ícono y el texto */
+}
+
+/* Icono de cerrar la barra lateral */
+.close-sidebar {
+    font-size: 20px;
+}
+
+
+/* Estilos para el icono del menú */
+.menu-icon {
+    cursor: pointer;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.menu-icon div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.blue-sidebar.open {
+    width: 200px; /* Ancho ajustado cuando tiene la clase 'open' */
+}
+
+/* Estilos para las opciones en la barra lateral */
+.sidebar-options {
+    display: flex;
+    flex-direction: column;
+    padding: 15px; /* Espaciado reducido */
+    height: 100%; /* Asegurarse de que ocupa toda la altura */
+    justify-content: flex-start; /* Distribuir espacio entre los elementos */
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Reducción del padding */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea separadora más visible */
+    margin-bottom: 8px; /* Menos separación entre los elementos */
+    transition: background-color 0.3s, color 0.3s; /* Transición para el efecto hover */
+    border-radius: 6px; /* Bordes redondeados */
+}
+
+.sidebar-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo más visible al pasar el ratón */
+    color: #13073f; /* Color de texto al pasar el ratón */
+}
+
+/* Estilos para la barra lateral azul */
+.blue-sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9;
+    top: 60px; /* Posicionada debajo de la barra negra */
+    left: 0;
+    background: linear-gradient(135deg, #5ef1c0, #0a99b3, #1a6da5, #160464); /* Gradiente azul con cuatro colores */
+    overflow-x: hidden;
+    transition: width 0.5s; /* Transición solo en el ancho para la apertura y cierre */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Sombra sutil para el borde */
+}
+
+/* Estilos específicos para el botón de cerrar */
+.sidebar-item.close-sidebar {
+    margin-top: 20px; /* Moverlo más arriba */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea separadora superior */
+    border-bottom: none; /* Sin línea inferior */
+}
+
+.blue-sidebar.open .sidebar-item.close-sidebar {
+    display: flex; /* Mostrar solo cuando la barra lateral está abierta */
+}
+
+/* Icono para el botón "Volver" */
+.close-sidebar .icon {
+    font-size: 1.5rem; /* Tamaño del ícono */
+}
+
+
+
+/* Nuevo estilo para la sección de pregunta y menú */
+.menu-form-container {/* Estilos para la barra superior */
+    .black-bar {
+        background-color: #000;
+        height: 60px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box; /* Incluye el padding en el ancho total */
+    }
+    
+    /* Contenedor del ícono del mensaje en la esquina inferior derecha */
+    .message-icon {
+        position: fixed;
+        bottom: 20px; 
+        right: 20px; 
+        background-color: #333; 
+        border-radius: 50%; 
+        width: 50px; /* Ajusta el ancho del círculo */
+        height: 50px; /* Ajusta la altura del círculo para que sea igual al ancho */
+        color: #fff; /* Color del ícono */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+        cursor: pointer; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; /* Centra verticalmente el ícono */
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Transición para animación */
+    }
+    
+    /* Ajusta el tamaño del ícono dentro del círculo */
+    .message-icon i {
+        font-size: 24px; /* Ajusta el tamaño del ícono según el tamaño del círculo */
+    }
+    
+    /* Efecto de animación al pasar el cursor sobre el ícono */
+    .message-icon:hover {
+        background-color: #555; /* Cambia el fondo cuando el puntero está sobre el ícono */
+        transform: scale(1.3); /* Aumenta el tamaño del círculo ligeramente */
+    }
+    
+    
+    
+    /* Icono del usuario en la franja negra */
+    .user-icon {
+        color: white;
+        font-size: 24px; /* Tamaño del ícono */
+        cursor: pointer; /* Cursor de puntero para indicar clickeable */
+        position: relative; /* Para posicionar el menú desplegable */
+    }
+    
+    /* Menú desplegable del usuario */
+    .user-menu {
+        position: absolute;
+        right: 20px; /* Ajustar la posición según sea necesario */
+        top: 70px; /* Ajustar la posición según sea necesario */
+        background-color: white; /* Fondo blanco para el menú */
+        color: black;
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+        z-index: 20; /* Asegurarse de que esté sobre otros elementos */
+        width: 200px; /* Ancho del menú */
+        display: flex;
+        flex-direction: column;
+        padding: 0; /* Elimina el espaciado interno para alinear mejor el pico */
+    }
+    
+    /* Pico del menú desplegable */
+    .user-menu::before {
+        content: "";
+        position: absolute;
+        top: -10px; /* Ajusta según sea necesario */
+        right: 20px; /* Ajusta según sea necesario */
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white; /* Color del fondo del menú */
+    }
+    
+    /* Elementos del menú desplegable */
+    .user-menu-item {
+        padding: 12px; /* Espaciado interno */
+        display: flex;
+        align-items: center; /* Alineación vertical del ícono y el texto */
+        border-bottom: 1px solid #ddd; /* Línea divisoria */
+        cursor: pointer; /* Cursor de puntero para elementos clickeables */
+        transition: background-color 0.3s; /* Transición suave para el hover */
+    }
+    
+    .user-menu-item:hover {
+        background-color: #f0f0f0; /* Fondo más oscuro al pasar el ratón */
+    }
+    
+    .user-menu-item:last-child {
+        border-bottom: none; /* Sin línea divisoria para el último elemento */
+    }
+    
+    .user-menu-item i {
+        margin-right: 8px; /* Espaciado entre el ícono y el texto */
+    }
+    
+    /* Estilos para la barra lateral azul */
+    
+    .blue-sidebar.open {
+        width: 250px; /* Ancho de la barra lateral abierta */
+    }
+    
+    /* Estilos para los elementos de la barra lateral */
+    .sidebar-item {
+        padding: 15px;
+        text-align: left;
+        color: white;
+        display: flex;
+        align-items: center; /* Alineación vertical del ícono y el texto */
+        cursor: pointer; /* Cursor de puntero para elementos clickeables */
+        transition: background-color 0.3s; /* Transición suave para el hover */
+    }
+    
+    .sidebar-item:hover {
+        background-color: #1c6ea4; /* Fondo más oscuro al pasar el ratón */
+    }
+    
+    .sidebar-item i {
+        margin-right: 10px; /* Espaciado entre el ícono y el texto */
+    }
+    
+    /* Icono de cerrar la barra lateral */
+    .close-sidebar {
+        font-size: 20px;
+    }
+    
+    
+    /* Estilos para el icono del menú */
+    .menu-icon {
+        cursor: pointer;
+        z-index: 11;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+    }
+    
+    .menu-icon div {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+    }
+    
+    .blue-sidebar.open {
+        width: 200px; /* Ancho ajustado cuando tiene la clase 'open' */
+    }
+    
+    /* Estilos para las opciones en la barra lateral */
+    .sidebar-options {
+        display: flex;
+        flex-direction: column;
+        padding: 15px; /* Espaciado reducido */
+        height: 100%; /* Asegurarse de que ocupa toda la altura */
+        justify-content: flex-start; /* Distribuir espacio entre los elementos */
+    }
+    
+    .sidebar-item {
+        display: flex;
+        align-items: center;
+        padding: 10px; /* Reducción del padding */
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+        color: white;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea separadora más visible */
+        margin-bottom: 8px; /* Menos separación entre los elementos */
+        transition: background-color 0.3s, color 0.3s; /* Transición para el efecto hover */
+        border-radius: 6px; /* Bordes redondeados */
+    }
+    
+    .sidebar-item:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Fondo más visible al pasar el ratón */
+        color: #13073f; /* Color de texto al pasar el ratón */
+    }
+    
+    /* Estilos para la barra lateral azul */
+    .blue-sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 9;
+        top: 60px; /* Posicionada debajo de la barra negra */
+        left: 0;
+        background: linear-gradient(135deg, #5ef1c0, #0a99b3, #1a6da5, #160464); /* Gradiente azul con cuatro colores */
+        overflow-x: hidden;
+        transition: width 0.5s; /* Transición solo en el ancho para la apertura y cierre */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Sombra sutil para el borde */
+    }
+    
+    /* Estilos específicos para el botón de cerrar */
+    .sidebar-item.close-sidebar {
+        margin-top: 20px; /* Moverlo más arriba */
+        border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea separadora superior */
+        border-bottom: none; /* Sin línea inferior */
+    }
+    
+    .blue-sidebar.open .sidebar-item.close-sidebar {
+        display: flex; /* Mostrar solo cuando la barra lateral está abierta */
+    }
+    
+    /* Icono para el botón "Volver" */
+    .close-sidebar .icon {
+        font-size: 1.5rem; /* Tamaño del ícono */
+    }
+    
+    
+    
+    /* Nuevo estilo para la sección de pregunta y menú */
+    .menu-form-container {
+        position: absolute;
+        top: calc(50% + 40px); /* Posicionar abajo de la bienvenida */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.5s ease-in-out; /* Transición suave para la aparición */
+    }
+    
+    .menu-form-container.show {
+        opacity: 1; /* Mostrar cuando tiene la clase 'show' */
+    }
+    
+    /* Estilos para el mensaje de bienvenida */
+    .welcome-message {
+        position: absolute;
+        top: 30%; /* Ajustar la posición vertical según sea necesario */
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 2rem; /* Tamaño de fuente ajustable */
+        color: #333; /* Color de texto */
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.5s ease-in-out; /* Transición suave para la aparición */
+    }
+    
+    .welcome-message.show {
+        opacity: 1; /* Mostrar cuando tiene la clase 'show' */
+    }
+    
+    /* Variables CSS para mantener la consistencia */
+    :root {
+        --primary-color: #00bfff;
+        --primary-hover: #0088cc;
+        --secondary-color: #333;
+        --message-icon-size: 60px;
+        --transition-duration: 0.3s;
+        --transition-ease: ease-in-out;
+        --sidebar-open-width: 250px;
+        --sidebar-closed-width: 0;
+        --text-color: #fff;
+        --background-color: #000;
+        --menu-bg-color: #fff;
+        --menu-text-color: #000;
+        --border-color: #ddd;
+        --shadow-color: rgba(0, 0, 0, 0.3);
+        --table-header-bg: #f4f4f4;
+        --progress-card-bg: rgba(0, 0, 0, 0.6);
+        --button-padding: 0.625rem 1.25rem; /* 10px 20px */
+    }
+    
+    
+    /* Botones */
+    .add-objective-button,
+    .pay-button {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        border: none;
+        padding: var(--button-padding);
+        cursor: pointer;
+        transition: background-color var(--transition-duration) ease;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+    
+    .add-objective-button:hover,
+    .pay-button:hover {
+        background-color: var(--primary-hover);
+    }
+    
+    .add-objective-button:active,
+    .pay-button:active {
+        transform: scale(0.98);
+    }
+    
+    .add-objective-button:focus-visible,
+    .pay-button:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+    
+    /* Contenedor de Tarjetas de Progreso */
+    .progress-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.875rem; /* 30px */
+        margin-top: 2.5rem; /* 40px */
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+    }
+    
+    /* Tarjeta de Progreso */
+    .progress-card {
+        background-color: var(--progress-card-bg);
+        border-radius: 0.9375rem; /* 15px */
+        padding: 1.25rem; /* 20px */
+        color: var(--text-color);
+        text-align: center;
+        width: 12.5rem; /* 200px */
+        transition: transform var(--transition-duration) var(--transition-ease);
+    }
+    
+    .progress-card:hover {
+        transform: translateY(-0.3125rem); /* -5px */
+    }
+    
+    .progress-card h3 {
+        margin-bottom: 0.9375rem; /* 15px */
+        font-size: 1.25rem;
+    }
+    
+    .progress-card input {
+        width: 70%;
+        padding: 0.625rem; /* 10px */
+        margin-top: 0.625rem; /* 10px */
+        border: none;
+        border-radius: 5px;
+    }
+    
+    .progress-card button {
+        margin-top: 0.625rem; /* 10px */
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        border: none;
+        padding: 0.5rem 1rem; /* 8px 16px */
+        cursor: pointer;
+        transition: background-color var(--transition-duration) ease;
+        border-radius: 5px;
+    }
+    
+    .progress-card button:hover {
+        background-color: var(--primary-hover);
+    }
+    
+    .progress-card button:active {
+        transform: scale(0.98);
+    }
+    
+    .progress-card button:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+    
+    /* Estilos Responsivos */
+    @media (max-width: 768px) {
+        .ahorro-content {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .table {
+            flex: 1 1 100%;
+            max-width: 90%;
+        }
+    
+        .progress-cards {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .progress-card {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+    .table-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .table {
+        width: 80%; /* Ajusta este valor para hacer espacio para el botón */
+    }
+    
+    .add-objective-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #00bfff;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: 10px; /* Ajusta el espacio entre la tabla y el botón */
+    }
+    
+    .add-objective-button:hover {
+        background-color: #008fcf;
+    }
+    
+    .add-icon {
+        font-size: 36px;
+        line-height: 50px;
+    }
+    
+    position:absolute;
+    top: calc(50% + 40px); /* Posicionar abajo de la bienvenida */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease-in-out; /* Transición suave para la aparición */
+}
+
+.menu-form-container.show {
+    opacity: 1; /* Mostrar cuando tiene la clase 'show' */
+}
+
+/* Estilos para el mensaje de bienvenida */
+.welcome-message {
+    position: absolute;
+    top: 30%; /* Ajustar la posición vertical según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 2rem; /* Tamaño de fuente ajustable */
+    color: #333; /* Color de texto */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease-in-out; /* Transición suave para la aparición */
+}
+
+.welcome-message.show {
+    opacity: 1; /* Mostrar cuando tiene la clase 'show' */
+}
+
+/* Variables CSS para mantener la consistencia */
+:root {
+    --primary-color: #00bfff;
+    --primary-hover: #0088cc;
+    --secondary-color: #333;
+    --message-icon-size: 60px;
+    --transition-duration: 0.3s;
+    --transition-ease: ease-in-out;
+    --sidebar-open-width: 250px;
+    --sidebar-closed-width: 0;
+    --text-color: #fff;
+    --background-color: #000;
+    --menu-bg-color: #fff;
+    --menu-text-color: #000;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --table-header-bg: #f4f4f4;
+    --progress-card-bg: rgba(0, 0, 0, 0.6);
+    --button-padding: 0.625rem 1.25rem; /* 10px 20px */
+}
+
+/* Contenedor Principal de Ahorro */
+.ahorro-container {
+    padding: 1.25rem; /* 20px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Contenido de Ahorro: Tablas */
+.ahorro-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 1.875rem; /* 30px */
+    gap: 2rem; /* Espacio entre tablas */
+}
+
+/* Tablas */
+.table {
+    flex: 1 1 65%; /* Flex-grow, flex-shrink, flex-basis */
+    min-width: 600px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.table th, .table td {
+    padding: 0.75rem; /* 12px */
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.table th {
+    background-color: var(--table-header-bg);
+    color: #333;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Botones */
+.add-objective-button,
+.pay-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: var(--button-padding);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.add-objective-button:hover,
+.pay-button:hover {
+    background-color: var(--primary-hover);
+}
+
+.add-objective-button:active,
+.pay-button:active {
+    transform: scale(0.98);
+}
+
+.add-objective-button:focus-visible,
+.pay-button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Contenedor de Tarjetas de Progreso */
+.progress-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875rem; /* 30px */
+    margin-top: 2.5rem; /* 40px */
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Tarjeta de Progreso */
+.progress-card {
+    background-color: var(--progress-card-bg);
+    border-radius: 0.9375rem; /* 15px */
+    padding: 1.25rem; /* 20px */
+    color: var(--text-color);
+    text-align: center;
+    width: 12.5rem; /* 200px */
+    transition: transform var(--transition-duration) var(--transition-ease);
+}
+
+.progress-card:hover {
+    transform: translateY(-0.3125rem); /* -5px */
+}
+
+.progress-card h3 {
+    margin-bottom: 0.9375rem; /* 15px */
+    font-size: 1.25rem;
+}
+
+.progress-card input {
+    width: 70%;
+    padding: 0.625rem; /* 10px */
+    margin-top: 0.625rem; /* 10px */
+    border: none;
+    border-radius: 5px;
+}
+
+.progress-card button {
+    margin-top: 0.625rem; /* 10px */
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem; /* 8px 16px */
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease;
+    border-radius: 5px;
+}
+
+.progress-card button:hover {
+    background-color: var(--primary-hover);
+}
+
+.progress-card button:active {
+    transform: scale(0.98);
+}
+
+.progress-card button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .ahorro-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .table {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+
+    .progress-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+.table-container {
+    display: flex;
+    align-items: center;
+}
+
+.table {
+    width: 80%; /* Ajusta este valor para hacer espacio para el botón */
+}
+
+.add-objective-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00bfff;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px; /* Ajusta el espacio entre la tabla y el botón */
+}
+
+.add-objective-button:hover {
+    background-color: #008fcf;
+}
+
+.add-icon {
+    font-size: 36px;
+    line-height: 50px;
+}

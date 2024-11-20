@@ -1,0 +1,177 @@
+/* Jubilacion.css */
+
+.jubilacion-container {
+    padding: 50px; /* Reduzco el padding para ajustarlo */
+    background: linear-gradient(120deg, #fffeff 40%, #7dc9ec 50%, #10685c); /* Gradiente diferente */
+    border-radius: 12px; /* Bordes más redondeados */
+    width: 120%; /* Ancho del contenedor al 100% */
+    max-width: 1400px; /* Ancho máximo ajustado */
+    margin:20px auto; /* Centrado automático con margen */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    overflow: auto; /* Agrega desplazamiento si es necesario */
+    min-height: 400px; /* Altura mínima para el contenedor */
+}
+
+.jubilacion-title {
+    font-size: 2em;
+    color: #1b263b; /* Color del título */
+    margin-bottom: 20px;
+    text-align: center; /* Centrar el título */
+}
+
+.jubilacion-content {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con menos transparencia */
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad */
+    margin-top: 20px; /* Espaciado superior */
+    text-align: center; /* Centrar el contenido */
+    animation: slideIn 0.5s ease forwards; /* Aplicar la animación */
+}
+
+.jubilacion-content p {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.jubilacion-content h2 {
+    color: #02045e; /* Un color diferente para los subtítulos */
+}
+
+.jubilacion-content .highlight {
+    background-color: #1317188a; /* Fondo resaltado */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Botones circulares modernos */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centrar los botones */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.circular-button {
+    width: 60px; /* Ajustado para ser más pequeño */
+    height: 60px; /* Ajustado para ser más pequeño */
+    border-radius: 50%; /* Hacer el botón circular */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    font-size: 1.5em; /* Tamaño de fuente más grande */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    margin: 0 5px; /* Espaciado entre los botones */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Transición suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Estilo del botón "Comprar" */
+.comprar-button {
+    background-color: #007bff; /* Color de fondo para "Comprar" */
+}
+
+.comprar-button:hover {
+    background-color: #0056b3; /* Color al pasar el mouse */
+    transform: translateY(-4px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+}
+
+/* Estilo del botón "Vender" */
+.vender-button {
+    background-color: #dc3545; /* Color de fondo para "Vender" */
+}
+
+.vender-button:hover {
+    background-color: #c82333; /* Color al pasar el mouse */
+    transform: translateY(-4px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+}
+
+/* Botón de acción */
+.action-button {
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 0 5px; /* Espacio entre botones */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s; /* Transición para el efecto hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    display: flex; /* Usar flex para alinear el texto e icono */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.action-button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+}
+
+/* Icono en el botón */
+.action-button i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+/* Contenedor de botón de predicción */
+.prediction-button-container {
+    display: flex;
+    justify-content: center; /* Centrar el botón de predicción */
+    margin: 20px 0; /* Espacio arriba y abajo del botón */
+}
+
+.calculo-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre los elementos, puedes ajustarlo a tu preferencia */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.calculo-controls label {
+    margin-right: 5px; /* Espacio entre el label y el selector */
+}
+
+.calculo-controls select {
+    width: 70px; /* Ajusta el ancho del selector según sea necesario */
+}
+
+/* Botones en contenedor */
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Ajusta este valor para cambiar el espacio entre los botones */
+    margin-bottom: 20px; /* Espacio inferior si es necesario */
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    0% {
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(20px); /* Se desplaza hacia abajo */
+    }
+    100% {
+        opacity: 1; /* Alcanza la opacidad completa */
+        transform: translateY(0); /* Se desplaza a su posición original */
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn i {
+    margin-right: 5px;
+}

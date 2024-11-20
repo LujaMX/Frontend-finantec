@@ -1,0 +1,148 @@
+.historial-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+}
+
+.tab-button {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 20px 20px 0 0;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.tab-button.active {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tab-button:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #007bff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.filter-btn:hover {
+    color: #0056b3;
+}
+
+.filter-options {
+    position: fixed;
+    right: 20px; /* Ajusta según sea necesario */
+    top: 80px; /* Ajusta según sea necesario */
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 250px;
+}
+
+.filter-options button, .filter-options input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #e0e0e0, #f5f5f5);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.filter-options button {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-options button:hover {
+    background: linear-gradient(145deg, #0056b3, #003d80);
+}
+
+.filter-options input {
+    border-color: #ccc;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.historial-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.historial-table th, .historial-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.historial-table th {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.total-row {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+.filter-options button, .filter-options input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #e0e0e0, #f5f5f5);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.filter-options button {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-options button:hover {
+    background: linear-gradient(145deg, #0056b3, #003d80);
+}
+
+/* Opcional: Estilo para el nuevo botón de filtro */
+.filter-options .filter-button-disabled {
+    background: linear-gradient(145deg, #e0e0e0, #f5f5f5);
+    color: #aaa;
+    cursor: not-allowed;
+}

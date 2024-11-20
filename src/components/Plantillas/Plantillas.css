@@ -1,0 +1,32 @@
+.plantilla-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.plantilla-item img {
+  width: 300px; /* Hacer la imagen más grande */
+  height: auto; /* Mantener la proporción */
+  margin-right: 20px; /* Margen entre la imagen y el texto */
+  border-radius: 15px; /* Esquinas ovaladas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Bordes borrosos para profundidad */
+}
+
+.plantilla-item p {
+  margin: 0; /* Eliminar el margen predeterminado */
+  max-width: 550px; /* Establecer un ancho máximo para el texto */
+}
+
+/* Estilos para el botón de descarga */
+.descarga-button {
+  background-color: #12134e; /* Color de fondo verde */
+  color: white; /* Color de texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Visualización en línea */
+  border-radius: 23px; /* Esquinas redondeadas */
+  margin-top: 10px; /* Margen superior */
+  animation: fadeIn 1s;
+  cursor: pointer; 
+}
